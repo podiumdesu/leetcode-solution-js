@@ -21,5 +21,5 @@ var addDigits = function(num) {
 };
 
 // amazing solution
-// res % 9 
+// res % 9  
 console.log(addDigits(45))
