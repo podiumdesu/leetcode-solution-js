@@ -17,7 +17,7 @@ function preOrder(root) {
   }
   return res
 }
-console.log(`先序遍历 ${preOrder(root)}`)
+// console.log(`先序遍历 ${preOrder(root)}`)
 
 
 
@@ -38,7 +38,7 @@ function inOrder(root) {
   }
   return res
 }
-console.log(`中序遍历 ${inOrder(root)}`)
+// console.log(`中序遍历 ${inOrder(root)}`)
 
 
 function postOrderTraversal(node, res) {
@@ -59,4 +59,10 @@ function postOrder(root) {
   return res
 }
 
-console.log(`后序遍历 ${postOrder(root)}`)
+// console.log(`后序遍历 ${postOrder(root)}`)
+
+module.exports = {
+  postOrder: postOrder,
+  preOrder: preOrder,
+  inOrder: inOrder
+}
