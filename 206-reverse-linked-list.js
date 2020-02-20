@@ -39,8 +39,12 @@ function printList(head) {
   }
   console.log(result)
 }
+var result = new ListNode(0)
 
-var reverseList = function(head) {
+function reverseList(head) {
+
+  // 1. use reverse array
+
   let i = 0
   let list = new ListNode(0)
   let result = new ListNode(0)
@@ -57,6 +61,35 @@ var reverseList = function(head) {
     list = list.next
   }
   return result.next
-};
 
-printList(reverseList(initList([1])))
+  // 2. not use recursion
+  // let pre = new ListNode(0)
+  // pre = pre.next
+  // let next = new ListNode(0)
+  // while (head !== null) {
+  //   next = head.next
+  //   head.next = pre
+  //   pre = head 
+  //   head = next
+  // }
+  // return pre
+
+  // 3 use recursion
+  // todo something wrong
+// var reverseList = function(head) {
+//   let temp = new ListNode(0)
+//   let result = new ListNode(0)
+//   if (head === null || head.next === null) {
+//     result = head
+//     return result
+//   } else {
+//     temp = reverseList(head.next) // 返回该节点的后一位
+//     temp.next = head
+//     head.next = null
+//   }
+//   return head
+
+  // 4 use unshift, similar with method 1
+// };
+}
+printList(reverseList(initList([1,2,3,4])))
